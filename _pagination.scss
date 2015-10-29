@@ -1,0 +1,10 @@
+.pagination {
+  border-radius: 0px;
+  & > li.active > a {
+    background-color: $nov-red;
+    border-color: $nov-red;
+  }
+  & > li:last-child > a, & > li:first-child > a {
+    border-radius: 0px;
+  }
+}
