@@ -1,0 +1,63 @@
+// Labels
+
+@mixin label-variant($color) {
+  background-color: $color;
+
+  &[href] {
+    &:hover,
+    &:focus {
+      background-color: darken($color, 10%);
+    }
+  }
+}
+
+
+
+// Buttons
+@mixin button-variant($color, $background, $border) {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+    //  $shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
+    //  .box-shadow($shadow);
+    $active-background: darken($background, 10%);
+    $active-border: darken($border, 12%);
+    &:focus,
+    &.focus,
+    &:active, 
+    &.active,
+    .open > &.dropdown-toggle {
+        color: $color;
+        background-color: $active-background;
+        border-color: $active-border;
+    }
+    &:hover {
+        color: $color;
+        background-color: $active-background;
+        border-color: $active-border;
+    }
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+        // Remove the gradient for the pressed/active state
+        background-image: none;
+        background-color: $active-background;
+        color:$color;
+    }
+     &:focus:active {
+    background-color: $active-background;
+    }
+    &.disabled,
+    &:disabled,
+    fieldset[disabled] & {
+        &:focus,
+        &.focus {
+            background-color: $background;
+            border-color: $border;
+        }
+        &:hover {
+            background-color: $background;
+            border-color: $border;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "project4",
+  "authors": [
+    "alyssalaura123 <alyssacummins123@gmail.com>"
+  ],
+  "description": "Project 4",
+  "main": "dist/awesomemodule.js",
+  "moduleType": [],
+  "keywords": [
+    "html5",
+    "css"
+  ],
+  "license": "MIT",
+  "homepage": "www.test.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.9.1",
+    "bootstrap": "~3.3.5",
+    "smoothscroll": "~0.1.0"
+  }
+}
+ 

@@ -1,0 +1,31 @@
+.panel {
+  border: none;
+  border-radius: 3px;
+     background-color: #DCDDDE;
+}
+.panel > .panel-heading {
+  border-top: 5px solid  $nov-red;
+   color: $nov-gray;
+}
+.panel > .panel-body {
+  background-color: #fff;
+  color: $nov-gray;
+}
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+
+    color: inherit;
+}
+.panel-heading span {
+    margin-top: -20px;
+    font-size: 15px;
+}
+.row {
+    margin-top: 20px;
+    padding: 0 10px;
+}
+.clickable {
+    cursor: pointer;
+}  

@@ -1,0 +1,17 @@
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  // Place the border on the list items and negative margin up for better styling
+  margin-bottom: -1px;
+  background-color: #fff;
+  
+}
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+        background-color: $nov-red;
+    color:#fff;
+    border-color: $nov-red;
+}
+.list-group-item.active .list-group-item-text, .list-group-item.active:focus .list-group-item-text, .list-group-item.active:hover .list-group-item-text{
+color:#fff;
+}

@@ -1,0 +1,11 @@
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: $well-bg;
+  border: 1px solid $well-border;
+}
+
+ .well blockquote {
+  border-left: 5px solid $nov-red; 
+ }

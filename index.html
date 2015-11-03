@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags always come first -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
- <nav class="navbar navbar-default">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Theme Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="sass/style.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+  
+</head>
+
+<body role=document>
+
+    <!-- Fixed navbar --> 
+    <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -20,7 +37,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <img src="images/nov-logo.png" alt="National Oilwell Varco, Inc." />
+                    <img src="assets/images/nov-logo.png" alt="National Oilwell Varco, Inc." />
                 </a>
             </div>
 
@@ -29,8 +46,38 @@
                     <li>
                         <a href="#gettingStarted">Getting Started</a>
                     </li>
-                    <li>
-                        <a href="#components">Components</a>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Components
+          <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                           <li>
+                            <a href="#typography">Typography</a>
+                        </li>
+                        <li>
+                            <a href="#jumbotron">Jumbotron</a>
+                        </li>
+                        <li>
+                            <a href="#panels">Panels</a>
+                        </li>
+                        <li>
+                            <a href="#listgroups">List-Groups</a>
+                        </li>
+                        <li>
+                            <a href="#navigation">Navigation</a>
+                        </li>
+                        <li>
+                            <a href="#buttons">Buttons</a>
+                        </li>
+                        <li>
+                            <a href="#forms">Forms</a>
+                        </li>
+                        <li>
+                            <a href="#pagination">Pagination</a>
+                        </li>
+                        <li>
+                            <a href="#Images">Images</a>
+                        </li>
+                        </ul>
                     </li>
                     <li>
                         <a href="#contributing">Contributing</a>
@@ -39,208 +86,1122 @@
             </div>
         </div>
     </nav>
-    <div class="container" role="main">
+    <div class="container">
+        <div class="row">
+            <!-- Side Nav Bar -->
 
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Theme example</h1>
-        <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
-      </div>
+            <div class="col-md-11">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1>Getting Started</h1>
+                        <p>This page uses the NOV Bootstrap theme.</p>
+                        <pre class="prettyprint">
+&lt;link href="Content/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;link href="Content/nov-bootstrap.min.css" rel="stylesheet"&gt;
+                        </pre>
+                    </div>
+                </div>
+                <hr />
 
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- Typography -->
 
-      <div class="page-header">
-        <h1>Buttons</h1>
-      </div>
-      <p>
-        <button type="button" class="btn btn-lg btn-default">Default</button>
-         
-        <button type="button" class="btn btn-lg btn-primary">Primary</button>
-        <button type="button" class="btn btn-lg btn-success">Success</button>
-        <button type="button" class="btn btn-lg btn-info">Info</button>
-        <button type="button" class="btn btn-lg btn-warning">Warning</button>
-        <button type="button" class="btn btn-lg btn-danger">Danger</button>
-        <button type="button" class="btn btn-lg btn-link">Link</button>
-      </p>
-      <p>
-        <button type="button" class="btn btn-default">Default</button>
-        <button type="button" class="btn btn-primary">Primary</button>
-        <button type="button" class="btn btn-success">Success</button>
-        <button type="button" class="btn btn-info">Info</button>
-        <button type="button" class="btn btn-warning">Warning</button>
-        <button type="button" class="btn btn-danger">Danger</button>
-        <button type="button" class="btn btn-link">Link</button>
-      </p>
-      <p>
-        <button type="button" class="btn btn-sm btn-default">Default</button>
-        <button type="button" class="btn btn-sm btn-primary">Primary</button>
-        <button type="button" class="btn btn-sm btn-success">Success</button>
-        <button type="button" class="btn btn-sm btn-info">Info</button>
-        <button type="button" class="btn btn-sm btn-warning">Warning</button>
-        <button type="button" class="btn btn-sm btn-danger">Danger</button>
-        <button type="button" class="btn btn-sm btn-link">Link</button>
-      </p>
-      <p>
-        <button type="button" class="btn btn-xs btn-default">Default</button>
-        <button type="button" class="btn btn-xs btn-primary">Primary</button>
-        <button type="button" class="btn btn-xs btn-success">Success</button>
-        <button type="button" class="btn btn-xs btn-info">Info</button>
-        <button type="button" class="btn btn-xs btn-warning">Warning</button>
-        <button type="button" class="btn btn-xs btn-danger">Danger</button>
-        <button type="button" class="btn btn-xs btn-link">Link</button>
-      </p>
+                        <h1 id="typography">Typography</h1>
+                        
+                        <!-- Headings -->
+                        <h4>Headings</h4>
+                        <br>
 
 
-      <div class="page-header">
-        <h1>Tables</h1>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
+                        <div class="well">
+
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h1>h1. Bootstrap heading <small>Secondary text</small></h1></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h2>h2. Bootstrap heading <small>Secondary text</small></h2></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3>h3. Bootstrap heading <small>Secondary text</small></h3></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>h4. Bootstrap heading <small>Secondary text</small></h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h5>h5. Bootstrap heading <small>Secondary text</small></h5></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h6>h6. Bootstrap heading <small>Secondary text</small></h6></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h3>Example</h3>
+                            <pre class="prettyprint">
+&lt;h1&gt;h1. Bootstrap heading&lt;/h1&gt;
+&lt;h2&gt;h2. Bootstrap heading&lt;/h2&gt;
+&lt;h3&gt;h3. Bootstrap heading&lt;/h3&gt;
+&lt;h4&gt;h4. Bootstrap heading&lt;/h4&gt;
+&lt;h5&gt;h5. Bootstrap heading&lt;/h5&gt;
+&lt;h6&gt;h6. Bootstrap heading&lt;/h6&gt;
+</pre>
+                        </div>
+                        <!-- Blockquotes -->
+
+                        <h4>Blockquotes</h4>
+                        <br>
+
+
+                        <div class="well">
+    <blockquote>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+         <footer>From John Smith</footer>
+    </blockquote>
+
+                            <h3>Example</h3>
+                            <pre class="prettyprint">
+  &lt;blockquote&gt;
+        &lt;p&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        &lt;/p&gt;
+    &lt;footer&gt;From John Smith&lt;/footer&gt;
+    &lt;/blockquote&gt;
+</pre>
+                        </div>
+<hr />
+                        <!-- Jumbotron -->
+
+                        <h1 id="jumbotron">Jumbotron</h1>
+                        <div class="well">
+                            <div class="jumbotron">
+                                <div class="container">
+                                    <h1 id="jumbotron">Header</h1>
+                                    <p>This is an example for jumbotron.</p>
+                                    <p>
+                                        <a class="btn btn-primary btn-lg" role="button">Learn more</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <h3>Example</h3>
+                            <pre class="prettyprint">
+&lt;div class=&quot;jumbotron&quot;&gt;     
+ &lt;div class=&quot;container&quot;&gt;
+       &lt;h1&gt;Header&lt;/h1&gt;
+           &lt;p&gt;This is an example for jumbotron.&lt;/p&gt;
+           &lt;p&gt;
+           &lt;a class=&quot;btn btn-primary btn-lg&quot; role=&quot;button&quot;&gt;Learn more&lt;/a&gt;
+           &lt;/p&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+<hr />
+
+                        <!-- Panels -->
+                        <h1 id="panels">Panels</h1> 
+                         <!-- Basic Panel -->                      
+                        <h4>Basic Panel</h4>
+                         <br>
+                        <div class="well">
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Panel Title</h3>
+                                </div>
+                                <div class="panel-body">
+                                    Panel Content
+                                </div>
+                            </div>
+                            <h3>Example</h3>
+                            <pre class="prettyprint">
+&lt;div class="panel panel-default"&gt;
+    &lt;div class="panel-heading"&gt;
+        &lt;h3 class="panel-title"&gt;Panel Title&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class="panel-body"&gt;
+        Panel Content
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </pre> </div>
+                            
+                             <!-- Dropdown Panel -->
+                             <h4>Dropdown Panel</h4>
+                         <br>
+                        <div class="well">
+	<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Panel 1</h3>
+					<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+				</div>
+				<div class="panel-body">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+</div>
+			</div>
+                            <h3>Example</h3>
+                            <pre class="prettyprint">
+&lt;div class=&quot;panel panel-default&quot;&gt;
+&lt;div class=&quot;panel-heading&quot;&gt;
+&lt;h3 class=&quot;panel-title&quot;&gt;Panel 1&lt;/h3&gt;
+&lt;span class=&quot;pull-right clickable&quot;&gt;&lt;i class=&quot;glyphicon glyphicon-chevron-up&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;panel-body&quot;&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+&lt;/div&gt;
+&lt;/div&gt;
+                        </pre> </div>
+                                   <hr />
+                                    <!-- List Groups -->
+                                                
+            <h1 id="listgroups">List groups</h1>
+         <div class="well">
+        <div class="row">
+           
+                 <div class="col-sm-4">
+                 
+                <ul class="list-group">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Morbi leo risus</li>
+                    <li class="list-group-item">Porta ac consectetur ac</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div>
+            <!-- /.col-sm-4 -->
+            <div class="col-sm-4">
+                <div class="list-group">
+                    <a href="#" class="list-group-item active">
+              Cras justo odio
+            </a>
+                    <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                    <a href="#" class="list-group-item">Morbi leo risus</a>
+                    <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                    <a href="#" class="list-group-item">Vestibulum at eros</a>
+                </div>
+            </div>
+            <!-- /.col-sm-4 -->
+            <div class="col-sm-4">
+                <div class="list-group">
+                    <a href="#" class="list-group-item active">
+                        <h4 class="list-group-item-heading">List group item heading</h4>
+                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">List group item heading</h4>
+                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">List group item heading</h4>
+                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    </a>
+                </div>
+            </div>
+            <!-- /.col-sm-4 -->
         </div>
-        <div class="col-md-6">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
+                       <h3>Example</h3>
+                            <pre class="prettyprint">
+&lt;ul class=&quot;nav nav-tabs&quot;&gt;
+  &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;dropdown&quot;&gt;
+    &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot;&gt;Menu 1
+    &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Submenu 1-1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Submenu 1-2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Submenu 1-3&lt;/a&gt;&lt;/li&gt; 
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Menu 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Menu 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+                        </pre>   </div>
+                                                                         
+                                    <hr />                                                
+                                                                                                            
+                        <!-- Navigation -->
+                              <h1 id="navigation">Navigation</h1> 
+                              
+                              <!-- Tabbed Menu -->
+                             <h4>Tabbed Menu</h4>
+                         <br>
+                        <div class="well">
+	<ul class="nav nav-tabs">
+  <li class="active"><a href="#">Home</a></li>
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1
+    <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="#">Submenu 1-1</a></li>
+      <li><a href="#">Submenu 1-2</a></li>
+      <li><a href="#">Submenu 1-3</a></li> 
+    </ul>
+  </li>
+  <li><a href="#">Menu 2</a></li>
+  <li><a href="#">Menu 3</a></li>
+</ul>
+                            <h3>Example</h3>
+                            <pre class="prettyprint">
+&lt;ul class=&quot;nav nav-tabs&quot;&gt;
+  &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;dropdown&quot;&gt;
+    &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot;&gt;Menu 1
+    &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Submenu 1-1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Submenu 1-2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Submenu 1-3&lt;/a&gt;&lt;/li&gt; 
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Menu 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Menu 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+                        </pre> </div>
+                        
+                            <h4>Pills</h4>
+                         <br>
+                        <div class="well">
+	<ul class="nav nav-pills nav-stacked">
+  <li class="active"><a href="#">Home</a></li>
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1
+    <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="#">Submenu 1-1</a></li>
+      <li><a href="#">Submenu 1-2</a></li>
+      <li><a href="#">Submenu 1-3</a></li> 
+    </ul>
+  </li>
+  <li><a href="#">Menu 2</a></li>
+  <li><a href="#">Menu 3</a></li>
+</ul>
+                            <h3>Example</h3>
+                            <pre class="prettyprint">
+&lt;ul class=&quot;nav nav-pills nav-stacked&quot;&gt;
+  &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;dropdown&quot;&gt;
+    &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot;&gt;Menu 1
+    &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Submenu 1-1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Submenu 1-2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Submenu 1-3&lt;/a&gt;&lt;/li&gt; 
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Menu 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Menu 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+                        </pre> </div>
+                        
+                        
+                              <h4>Navigation Bar</h4>
+                         <br>
+                        <div class="well">
+	<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/nov-logo.png" alt="National Oilwell Varco, Inc." />
+            </a>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col-md-6">
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td rowspan="2">1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@TwBootstrap</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#gettingStarted">Getting Started</a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Components
+          <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li> <a href="#typography">Typography</a>
+                        </li>
+                        <li>
+                            <a href="#jumbotron">Jumbotron</a>
+                        </li>
+                        <li>
+                            <a href="#panels">Panels</a>
+                        </li>
+                        <li>
+                            <a href="#buttons">Buttons</a>
+                        </li>
+                        <li>
+                            <a href="#forms">Forms</a>
+                        </li>
+                        <li>
+                            <a href="#pagination">Pagination</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#contributing">Contributing</a>
+                </li>
+            </ul>
         </div>
-        <div class="col-md-6">
-          <table class="table table-condensed">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
+    </div>
+</nav>
+                            <h3>Example</h3>
+                            <pre class="prettyprint">
+&lt;nav class=&quot;navbar navbar-default&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;navbar-header&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;navbar-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#bs-example-navbar-collapse-1&quot;&gt;
+                &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+                &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;
+                &lt;img src=&quot;assets/images/nov-logo.png&quot; alt=&quot;National Oilwell Varco, Inc.&quot; /&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;bs-example-navbar-collapse-1&quot;&gt;
+            &lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;#gettingStarted&quot;&gt;Getting Started&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;dropdown&quot;&gt;
+                    &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot;&gt;Components
+          &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                        &lt;li&gt; &lt;a href=&quot;#typography&quot;&gt;Typography&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#jumbotron&quot;&gt;Jumbotron&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#panels&quot;&gt;Panels&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#buttons&quot;&gt;Buttons&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#forms&quot;&gt;Forms&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#pagination&quot;&gt;Pagination&lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;#contributing&quot;&gt;Contributing&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+                        </pre> </div>
+                        
+                        
+                        
+                        
+                        
+                         <!-- Fixed navbar --> 
+   
+                        
+                        <hr />
+                        <!-- Buttons -->
+                        <h1 id="buttons">Buttons</h1>
+                        <div class="well">
+
+
+
+                            <p>
+
+                                <button type="button" class="btn btn-lg btn-default">Default</button>
+                                <button type="button" class="btn btn-lg btn-primary">Primary</button>
+                                <button type="button" class="btn btn-lg btn-success">Success</button>
+                                <button type="button" class="btn btn-lg btn-info">Info</button>
+                                <button type="button" class="btn btn-lg btn-warning">Warning</button>
+                                <button type="button" class="btn btn-lg btn-danger">Danger</button>
+                                <button type="button" class="btn btn-lg btn-link">Link</button>
+                            </p>
+
+                            <p>
+                                <button type="button" class="btn btn-default">Default</button>
+                                <button type="button" class="btn btn-primary">Primary</button>
+                                <button type="button" class="btn btn-success">Success</button>
+                                <button type="button" class="btn btn-info">Info</button>
+                                <button type="button" class="btn btn-warning">Warning</button>
+                                <button type="button" class="btn btn-danger">Danger</button>
+                                <button type="button" class="btn btn-link">Link</button>
+                            </p>
+                            <p>
+                                <button type="button" class="btn btn-sm btn-default">Default</button>
+                                <button type="button" class="btn btn-sm btn-primary">Primary</button>
+                                <button type="button" class="btn btn-sm btn-success">Success</button>
+                                <button type="button" class="btn btn-sm btn-info">Info</button>
+                                <button type="button" class="btn btn-sm btn-warning">Warning</button>
+                                <button type="button" class="btn btn-sm btn-danger">Danger</button>
+                                <button type="button" class="btn btn-sm btn-link">Link</button>
+                            </p>
+
+                            <h3>Example</h3>
+                            <pre class="prettyprint">
+        &lt;p&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-lg btn-default&quot;&gt;Default&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-lg btn-primary&quot;&gt;Primary&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-lg btn-success&quot;&gt;Success&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-lg btn-info&quot;&gt;Info&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-lg btn-warning&quot;&gt;Warning&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-lg btn-danger&quot;&gt;Danger&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-lg btn-link&quot;&gt;Link&lt;/button&gt;
+        &lt;/p&gt;
+       
+        &lt;p&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Default&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-info&quot;&gt;Info&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-warning&quot;&gt;Warning&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;Link&lt;/button&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-sm btn-default&quot;&gt;Default&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-sm btn-primary&quot;&gt;Primary&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-sm btn-success&quot;&gt;Success&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-sm btn-info&quot;&gt;Info&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-sm btn-warning&quot;&gt;Warning&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-sm btn-danger&quot;&gt;Danger&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-sm btn-link&quot;&gt;Link&lt;/button&gt;
+        &lt;/p&gt;
+         </pre></div>
+                       <hr />
+                        <!-- Forms -->
+                        <h1 id="forms">Forms</h1>
+                        <h4>Input Boxes</h4>
+                        <br>
+                        <div class="well">
+
+                            <form>
+                                <div class="form-group">
+                                    <p>Email address:</p>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                </div>
+                                <div class="form-group">
+                                    <p>Password:</p>
+                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                </div>
+                            </form>
+                            <h3>Example</h3>
+                            <pre class="prettyprint">
+&lt;form&gt;
+    &lt;div class="form-group"&gt;
+    &lt;p&gt;Email address:&lt;/p&gt;
+    &lt;input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+    &lt;p&gt;Password:&lt;/p&gt;
+    &lt;input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+                        </pre></div>
+                        <h4>Input Components</h4>
+                        <br>
+                        <div class="well">
+                            <p>Checkbox:</p>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="">Option 1</label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="">Option 2</label>
+                            </div>
+                            <div class="checkbox disabled">
+                                <label>
+                                    <input type="checkbox" value="" disabled>Disabled Option 3</label>
+                            </div>
+
+
+
+                            <br>
+                            <p>Radio Button:</p>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optradio">Option 1</label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optradio">Option 2</label>
+                            </div>
+                            <div class="radio disabled">
+                                <label>
+                                    <input type="radio" name="optradio" disabled>Disabled Option 3</label>
+                            </div>
+
+
+                            <h3>Example</h3>
+                            <pre class="prettyprint">
+&lt;h4&gt;Checkbox&lt;/h4&gt;
+        &lt;div class=&quot;checkbox&quot;&gt;
+             &lt;label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;Option 1&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;checkbox&quot;&gt;
+              &lt;label&gt; &lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;Option 2&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;checkbox disabled&quot;&gt;
+              &lt;label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;&quot; disabled&gt;Disabled Option 3&lt;/label&gt;
+       &lt;/div&gt;
+                            &lt;br&gt;
+&lt;h4&gt;Radio Button&lt;/h4&gt;
+    &lt;div class=&quot;radio&quot;&gt;
+       &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;optradio&quot;&gt;Option 1&lt;/label&gt;
+       &lt;/div&gt;
+       &lt;div class=&quot;radio&quot;&gt;
+             &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;optradio&quot;&gt;Option 2&lt;/label&gt;
+       &lt;/div&gt;
+       &lt;div class=&quot;radio disabled&quot;&gt;
+             &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;optradio&quot; disabled&gt;Disabled Option 3&lt;/label&gt;
+       &lt;/div&gt;
+                        </pre></div>
+                        <h4>Textboxes</h4>
+                        <br>
+                        <div class="well">
+                            <div class="form-group">
+                                <p>Comment:</p>
+                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                            </div>
+                            <h3>Example</h3>
+                            <pre class="prettyprint">
+&lt;div class=&quot;form-group&quot;&gt;
+  &lt;p&quot;comment&quot;&gt;Comment:&lt;/p&gt;
+  &lt;textarea class=&quot;form-control&quot; rows=&quot;5&quot; id=&quot;comment&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+                        </pre></div>
+                        <h4>Select List</h4>
+                        <br>
+                        <div class="well">
+                            <div class="form-group">
+                                <p>Select list:</p>
+                                <select class="form-control" id="sel1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                            <h3>Example</h3>
+                            <pre class="prettyprint">
+&lt;div class=&quot;form-group&quot;&gt;
+  &lt;p&gt;Select list:&lt;/p&gt;
+  &lt;select class=&quot;form-control&quot; id=&quot;sel1&quot;&gt;
+    &lt;option&gt;1&lt;/option&gt;
+    &lt;option&gt;2&lt;/option&gt;
+    &lt;option&gt;3&lt;/option&gt;
+    &lt;option&gt;4&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;
+                        </pre></div>
+<hr />
+                        <!-- Validation -->
+                        <h4>Validation Boxes</h4>
+                        <br>
+                        <div class="well">
+                            <form class="form-horizontal" role="form">
+                                <div class="form-group has-success has-feedback">                    
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="inputSuccess">
+                                        <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group has-warning has-feedback">                             
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="inputWarning">
+                                        <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group has-error has-feedback">  
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="inputError">
+                                        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                                    </div>
+                                </div>
+                            </form>
+                            <h3>Example</h3>
+                            <pre class="prettyprint">
+  &lt;form class=&quot;form-horizontal&quot; role=&quot;form&quot;&gt;
+            &lt;div class=&quot;form-group has-success has-feedback&quot;&gt;                    
+            &lt;div class=&quot;col-sm-10&quot;&gt;
+                &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;inputSuccess&quot;&gt;
+                    &lt;span class=&quot;glyphicon glyphicon-ok form-control-feedback&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-group has-warning has-feedback&quot;&gt;                             
+            &lt;div class=&quot;col-sm-10&quot;&gt;
+                &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;inputWarning&quot;&gt;
+                    &lt;span class=&quot;glyphicon glyphicon-warning-sign form-control-feedback&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-group has-error has-feedback&quot;&gt;  
+            &lt;div class=&quot;col-sm-10&quot;&gt;
+                &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;inputError&quot;&gt;
+                    &lt;span class=&quot;glyphicon glyphicon-remove form-control-feedback&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+  &lt;/form&gt;                       
+                        </pre></div>
+
+<hr />
+                        <!-- Pagination -->
+                        <h1 id="pagination">Pagination</h1>
+                        <div class="well">
+
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="#">1</a>
+                                </li>
+                                <li>
+                                    <a href="#">2</a>
+                                </li>
+                                <li>
+                                    <a href="#">3</a>
+                                </li>
+                                <li>
+                                    <a href="#">4</a>
+                                </li>
+                                <li>
+                                    <a href="#">5</a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <h3>Example</h3>
+                            <pre class="prettyprint">
+&lt;ul class="pagination"&gt;
+    &lt;li&gt;
+        &lt;a href="#"&gt;
+            &lt;span aria-hidden="true"&gt;&laquo;&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="active"&gt;
+        &lt;a href="#"&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#"&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#"&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#"&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#"&gt;5&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#"&gt;
+            &lt;span aria-hidden="true"&gt;&raquo;&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+                        </pre></div>
+
+                         
+                         <hr />
+                          <!-- Images --> 
+     
+
+                        <h1 id="Images">Images</h1>
+                        <div class="well">
+                           <h4>Basic Image</h4><br>
+                             <img src="http://placehold.it/800x400" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">
+                            <h3>Example</h3>
+                            <pre class="prettyprint">
+&lt;img src=&quot;http://placehold.it/800x400&quot; class=&quot;img-thumbnail&quot; alt=&quot;A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera&quot;&gt;
+</pre></div>
+                          <!--Media Objects-->
+                         
+                        <div class="well">
+                           <h4>Media Object Content Block </h4><br>
+                             <div class="media">
+  <div class="media-left media-middle">
+    <a href="#">
+      <img class="media-object" src="http://placehold.it/400x226" alt="A generic square">
+    </a>
+  </div>
+  <div class="media-body">
+    <h2 class="media-heading">We deliver success</h2>
+    <p>Throughout every region in the world and every area of drilling and production, our family of companies provides the expertise, equipment and operational support necessary for success – now and in the future.</p>
+  </div>
+</div>
+                            <h3>Example</h3>
+                            <pre class="prettyprint">
+  &lt;div class=&quot;media&quot;&gt;
+  &lt;div class=&quot;media-left media-middle&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;
+      &lt;img class=&quot;media-object&quot; src=&quot;http://placehold.it/400x226&quot; alt=&quot;A generic square&quot;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;media-body&quot;&gt;
+    &lt;h2 class=&quot;media-heading&quot;&gt;We deliver success&lt;/h2&gt;
+    &lt;p&gt;Throughout every region in the world and every area of drilling and production, our family of companies provides the expertise, equipment and operational support necessary for success – now and in the future.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre></div>
+                          
+                          
+
+                          <!--Carousel-->
+                          
+                          <div class="well">
+                           <h4>Carousel Images</h4><br>
+                            
+
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img class="img-responsive" src="http://placehold.it/800x400" alt="...">
+                        <div class="carousel-caption">
+                            <h3>Heading</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="img-responsive" src="http://placehold.it/800x400" alt="...">
+                        <div class="carousel-caption">
+                            <h3>Heading</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="img-responsive" src="http://placehold.it/800x400" alt="...">
+                        <div class="carousel-caption">
+                            <h3>Heading</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+      
+                            <h3>Example</h3>
+                            <pre class="prettyprint">
+   &lt;div id=&quot;carousel-example-generic&quot; class=&quot;carousel slide&quot; data-ride=&quot;carousel&quot;&gt;
+                &lt;!-- Indicators --&gt;
+                &lt;ol class=&quot;carousel-indicators&quot;&gt;
+                    &lt;li data-target=&quot;#carousel-example-generic&quot; data-slide-to=&quot;0&quot; class=&quot;active&quot;&gt;&lt;/li&gt;
+                    &lt;li data-target=&quot;#carousel-example-generic&quot; data-slide-to=&quot;1&quot;&gt;&lt;/li&gt;
+                    &lt;li data-target=&quot;#carousel-example-generic&quot; data-slide-to=&quot;2&quot;&gt;&lt;/li&gt;
+                &lt;/ol&gt;
+
+                &lt;!-- Wrapper for slides --&gt;
+                &lt;div class=&quot;carousel-inner&quot;&gt;
+                    &lt;div class=&quot;item active&quot;&gt;
+                        &lt;img class=&quot;img-responsive&quot; src=&quot;http://placehold.it/800x400&quot; alt=&quot;...&quot;&gt;
+                        &lt;div class=&quot;carousel-caption&quot;&gt;
+                            &lt;h3&gt;Heading&lt;/h3&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;item&quot;&gt;
+                        &lt;img class=&quot;img-responsive&quot; src=&quot;http://placehold.it/800x400&quot; alt=&quot;...&quot;&gt;
+                        &lt;div class=&quot;carousel-caption&quot;&gt;
+                            &lt;h3&gt;Heading&lt;/h3&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;item&quot;&gt;
+                        &lt;img class=&quot;img-responsive&quot; src=&quot;http://placehold.it/800x400&quot; alt=&quot;...&quot;&gt;
+                        &lt;div class=&quot;carousel-caption&quot;&gt;
+                            &lt;h3&gt;Heading&lt;/h3&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Controls --&gt;
+                &lt;a class=&quot;left carousel-control&quot; href=&quot;#carousel-example-generic&quot; data-slide=&quot;prev&quot;&gt;
+                    &lt;span class=&quot;glyphicon glyphicon-chevron-left&quot;&gt;&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;a class=&quot;right carousel-control&quot; href=&quot;#carousel-example-generic&quot; data-slide=&quot;next&quot;&gt;
+                    &lt;span class=&quot;glyphicon glyphicon-chevron-right&quot;&gt;&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+</pre></div>
+
+                       
+                       
+                       
+                        <hr />
+
+                        <!-- Contribution -->
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h1 id="contributing">Contributing</h1>
+                                <p>Follow these steps to contribute to this project:</p>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-1">
+               
+                <nav class="hidden-xs hidden-sm">
+                   
+                    <ul class="nav nav-tabs">
+                        <li>
+                            <a href="#typography">Typography</a>
+                        </li>
+                        <li>
+                            <a href="#jumbotron">Jumbotron</a>
+                        </li>
+                        <li>
+                            <a href="#panels">Panels</a>
+                        </li>
+                        <li>
+                            <a href="#listgroups">List-Groups</a>
+                        </li>
+                        <li>
+                            <a href="#navigation">Navigation</a>
+                        </li>
+                        <li>
+                            <a href="#buttons">Buttons</a>
+                        </li>
+                        <li>
+                            <a href="#forms">Forms</a>
+                        </li>
+                        <li>
+                            <a href="#pagination">Pagination</a>
+                        </li>
+                        <li>
+                            <a href="#Images">Images</a>
+                        </li>
+                    </ul>
+                    
+                </nav>
+             
+            </div>
         </div>
-      </div>
+        <hr />
+        <footer class="text-center">
+            <p>©2015 National Oilwell Varco. All Rights Reserved.</p>
+        </footer>
+    </div>
 
 
-      <div class="page-header">
-        <h1>Thumbnails</h1>
-      </div>
-      <img data-src="holder.js/200x200" class="img-thumbnail" alt="200x200" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzIwMHgyMDAKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTBiM2Q0NGI4NiB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1MGIzZDQ0Yjg2Ij48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9Ijc1LjUiIHk9IjEwNC41Ij4yMDB4MjAwPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true" style="width: 200px; height: 200px;">
+    <div class="container theme-showcase" role="main">
+        <div class="page-header">
+            <h1>Buttons</h1>
+        </div>
+        <p>
+            <button type="button" class="btn btn-lg btn-default">Default</button>
+            <button type="button" class="btn btn-lg btn-primary">Primary</button>
+            <button type="button" class="btn btn-lg btn-success">Success</button>
+            <button type="button" class="btn btn-lg btn-info">Info</button>
+            <button type="button" class="btn btn-lg btn-warning">Warning</button>
+            <button type="button" class="btn btn-lg btn-danger">Danger</button>
+            <button type="button" class="btn btn-lg btn-link">Link</button>
+        </p>
+        <p>
+            <button type="button" class="btn btn-default">Default</button>
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-link">Link</button>
+        </p>
+        <p>
+            <button type="button" class="btn btn-sm btn-default">Default</button>
+            <button type="button" class="btn btn-sm btn-primary">Primary</button>
+            <button type="button" class="btn btn-sm btn-success">Success</button>
+            <button type="button" class="btn btn-sm btn-info">Info</button>
+            <button type="button" class="btn btn-sm btn-warning">Warning</button>
+            <button type="button" class="btn btn-sm btn-danger">Danger</button>
+            <button type="button" class="btn btn-sm btn-link">Link</button>
+        </p>
 
 
-      <div class="page-header">
-        <h1>Labels</h1>
-      </div>
-      <h1>
+
+        <div class="page-header">
+            <h1>Tables</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">1</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@TwBootstrap</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="page-header">
+            <h1>Thumbnails</h1>
+        </div>
+        <img src="http://placehold.it/800x400" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">
+
+
+        <div class="page-header">
+            <h1>Labels</h1>
+        </div>
+        <h1>
         <span class="label label-default">Default</span>
         <span class="label label-primary">Primary</span>
         <span class="label label-success">Success</span>
@@ -248,7 +1209,7 @@
         <span class="label label-warning">Warning</span>
         <span class="label label-danger">Danger</span>
       </h1>
-      <h2>
+        <h2>
         <span class="label label-default">Default</span>
         <span class="label label-primary">Primary</span>
         <span class="label label-success">Success</span>
@@ -256,7 +1217,7 @@
         <span class="label label-warning">Warning</span>
         <span class="label label-danger">Danger</span>
       </h2>
-      <h3>
+        <h3>
         <span class="label label-default">Default</span>
         <span class="label label-primary">Primary</span>
         <span class="label label-success">Success</span>
@@ -264,7 +1225,7 @@
         <span class="label label-warning">Warning</span>
         <span class="label label-danger">Danger</span>
       </h3>
-      <h4>
+        <h4 class="h4">
         <span class="label label-default">Default</span>
         <span class="label label-primary">Primary</span>
         <span class="label label-success">Success</span>
@@ -272,7 +1233,7 @@
         <span class="label label-warning">Warning</span>
         <span class="label label-danger">Danger</span>
       </h4>
-      <h5>
+        <h5>
         <span class="label label-default">Default</span>
         <span class="label label-primary">Primary</span>
         <span class="label label-success">Success</span>
@@ -280,7 +1241,7 @@
         <span class="label label-warning">Warning</span>
         <span class="label label-danger">Danger</span>
       </h5>
-      <h6>
+        <h6>
         <span class="label label-default">Default</span>
         <span class="label label-primary">Primary</span>
         <span class="label label-success">Success</span>
@@ -288,322 +1249,378 @@
         <span class="label label-warning">Warning</span>
         <span class="label label-danger">Danger</span>
       </h6>
-      <p>
-        <span class="label label-default">Default</span>
-        <span class="label label-primary">Primary</span>
-        <span class="label label-success">Success</span>
-        <span class="label label-info">Info</span>
-        <span class="label label-warning">Warning</span>
-        <span class="label label-danger">Danger</span>
-      </p>
+       
 
 
-      <div class="page-header">
-        <h1>Badges</h1>
-      </div>
-      <p>
-        <a href="#">Inbox <span class="badge">42</span></a>
-      </p>
-      <ul class="nav nav-pills" role="tablist">
-        <li role="presentation" class="active"><a href="#">Home <span class="badge">42</span></a></li>
-        <li role="presentation"><a href="#">Profile</a></li>
-        <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
-      </ul>
-
-
-      <div class="page-header">
-        <h1>Dropdown menus</h1>
-      </div>
-      <div class="dropdown theme-dropdown clearfix">
-        <a id="dropdownMenu1" href="#" class="sr-only dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li class="active"><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">Separated link</a></li>
+        <div class="page-header">
+            <h1>Badges</h1>
+        </div>
+        <p>
+            <a href="#">Inbox <span class="badge">42</span></a>
+        </p>
+        <ul class="nav nav-pills" role="tablist">
+            <li role="presentation" class="active"><a href="#">Home <span class="badge">42</span></a></li>
+            <li role="presentation"><a href="#">Profile</a></li>
+            <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
         </ul>
-      </div>
 
 
-      <div class="page-header">
-        <h1>Navs</h1>
-      </div>
-      <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a href="#">Home</a></li>
-        <li role="presentation"><a href="#">Profile</a></li>
-        <li role="presentation"><a href="#">Messages</a></li>
-      </ul>
-      <ul class="nav nav-pills" role="tablist">
-        <li role="presentation" class="active"><a href="#">Home</a></li>
-        <li role="presentation"><a href="#">Profile</a></li>
-        <li role="presentation"><a href="#">Messages</a></li>
-      </ul>
-
-
-      <div class="page-header">
-        <h1>Navbars</h1>
-      </div>
-
-      <nav class="navbar navbar-default">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Project name</a>
-          </div>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div><!--/.nav-collapse -->
+        <div class="page-header">
+            <h1>Dropdown menus</h1>
         </div>
-      </nav>
-
-      <nav class="navbar navbar-inverse">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Project name</a>
-          </div>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
+        <div class="dropdown theme-dropdown clearfix">
+            <a id="dropdownMenu1" href="#" class="sr-only dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li class="active"><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
             </ul>
-          </div><!--/.nav-collapse -->
         </div>
-      </nav>
 
 
-      <div class="page-header">
-        <h1>Alerts</h1>
-      </div>
-      <div class="alert alert-success" role="alert">
-        <strong>Well done!</strong> You successfully read this important alert message.
-      </div>
-      <div class="alert alert-info" role="alert">
-        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-      </div>
-      <div class="alert alert-warning" role="alert">
-        <strong>Warning!</strong> Best check yo self, you're not looking too good.
-      </div>
-      <div class="alert alert-danger" role="alert">
-        <strong>Oh snap!</strong> Change a few things up and try submitting again.
-      </div>
+        <div class="page-header">
+            <h1>Navs</h1>
+        </div>
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">Profile</a></li>
+            <li role="presentation"><a href="#">Messages</a></li>
+        </ul>
+        <ul class="nav nav-pills" role="tablist">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">Profile</a></li>
+            <li role="presentation"><a href="#">Messages</a></li>
+        </ul>
 
 
-      <div class="page-header">
-        <h1>Progress bars</h1>
-      </div>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="sr-only">60% Complete</span></div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"><span class="sr-only">40% Complete (success)</span></div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"><span class="sr-only">20% Complete</span></div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete (warning)</span></div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"><span class="sr-only">80% Complete (danger)</span></div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-success" style="width: 35%"><span class="sr-only">35% Complete (success)</span></div>
-        <div class="progress-bar progress-bar-warning" style="width: 20%"><span class="sr-only">20% Complete (warning)</span></div>
-        <div class="progress-bar progress-bar-danger" style="width: 10%"><span class="sr-only">10% Complete (danger)</span></div>
-      </div>
+        <div class="page-header">
+            <h1>Navbars</h1>
+        </div>
+
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Project name</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Nav header</li>
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Project name</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Nav header</li>
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
 
 
-      <div class="page-header">
-        <h1>List groups</h1>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <ul class="list-group">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
-        </div><!-- /.col-sm-4 -->
-        <div class="col-sm-4">
-          <div class="list-group">
-            <a href="#" class="list-group-item active">
+        <div class="page-header">
+            <h1>Alerts</h1>
+        </div>
+        <div class="alert alert-success" role="alert">
+            <strong>Well done!</strong> You successfully read this important alert message.
+        </div>
+        <div class="alert alert-info" role="alert">
+            <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+        </div>
+        <div class="alert alert-warning" role="alert">
+            <strong>Warning!</strong> Best check yo self, you're not looking too good.
+        </div>
+        <div class="alert alert-danger" role="alert">
+            <strong>Oh snap!</strong> Change a few things up and try submitting again.
+        </div>
+
+
+        <div class="page-header">
+            <h1>Progress bars</h1>
+        </div>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="sr-only">60% Complete</span></div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"><span class="sr-only">40% Complete (success)</span></div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"><span class="sr-only">20% Complete</span></div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete (warning)</span></div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"><span class="sr-only">80% Complete (danger)</span></div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-success" style="width: 35%"><span class="sr-only">35% Complete (success)</span></div>
+            <div class="progress-bar progress-bar-warning" style="width: 20%"><span class="sr-only">20% Complete (warning)</span></div>
+            <div class="progress-bar progress-bar-danger" style="width: 10%"><span class='sr-only'>10% Complete (danger)</span></div>
+        </div>
+
+
+        <div class="page-header">
+            <h1>List groups</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <ul class="list-group">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Morbi leo risus</li>
+                    <li class="list-group-item">Porta ac consectetur ac</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div>
+            <!-- /.col-sm-4 -->
+            <div class="col-sm-4">
+                <div class="list-group">
+                    <a href="#" class="list-group-item active">
               Cras justo odio
             </a>
-            <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-            <a href="#" class="list-group-item">Morbi leo risus</a>
-            <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-            <a href="#" class="list-group-item">Vestibulum at eros</a>
-          </div>
-        </div><!-- /.col-sm-4 -->
-        <div class="col-sm-4">
-          <div class="list-group">
-            <a href="#" class="list-group-item active">
-              <h4 class="list-group-item-heading">List group item heading</h4>
-              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
-            <a href="#" class="list-group-item">
-              <h4 class="list-group-item-heading">List group item heading</h4>
-              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
-            <a href="#" class="list-group-item">
-              <h4 class="list-group-item-heading">List group item heading</h4>
-              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
-          </div>
-        </div><!-- /.col-sm-4 -->
-      </div>
-
-
-      <div class="page-header">
-        <h1>Panels</h1>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
+                    <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                    <a href="#" class="list-group-item">Morbi leo risus</a>
+                    <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                    <a href="#" class="list-group-item">Vestibulum at eros</a>
+                </div>
             </div>
-            <div class="panel-body">
-              Panel content
+            <!-- /.col-sm-4 -->
+            <div class="col-sm-4">
+                <div class="list-group">
+                    <a href="#" class="list-group-item active">
+                        <h4 class="list-group-item-heading">List group item heading</h4>
+                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">List group item heading</h4>
+                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">List group item heading</h4>
+                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    </a>
+                </div>
             </div>
-          </div>
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-        </div><!-- /.col-sm-4 -->
-        <div class="col-sm-4">
-          <div class="panel panel-success">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-          <div class="panel panel-info">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-        </div><!-- /.col-sm-4 -->
-        <div class="col-sm-4">
-          <div class="panel panel-warning">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-          <div class="panel panel-danger">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-        </div><!-- /.col-sm-4 -->
-      </div>
-
-
-      <div class="page-header">
-        <h1>Wells</h1>
-      </div>
-      <div class="well">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
-      </div>
-
-
-      <div class="page-header">
-        <h1>Carousel</h1>
-      </div>
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-          <div class="item">
-            <img data-src="holder.js/1140x500/auto/#777:#555/text:First slide" alt="First slide [1140x500]" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTE0MCIgaGVpZ2h0PSI1MDAiIHZpZXdCb3g9IjAgMCAxMTQwIDUwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvMTE0MHg1MDAvYXV0by8jNzc3OiM1NTUvdGV4dDpGaXJzdCBzbGlkZQpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1MGIzZDQ1ODUwIHRleHQgeyBmaWxsOiM1NTU7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6NTdwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTUwYjNkNDU4NTAiPjxyZWN0IHdpZHRoPSIxMTQwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzc3NyIvPjxnPjx0ZXh0IHg9IjM5MC41MDc4MTI1IiB5PSIyNzUuNSI+Rmlyc3Qgc2xpZGU8L3RleHQ+PC9nPjwvZz48L3N2Zz4=" data-holder-rendered="true">
-          </div>
-          <div class="item active">
-            <img data-src="holder.js/1140x500/auto/#666:#444/text:Second slide" alt="Second slide [1140x500]" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTE0MCIgaGVpZ2h0PSI1MDAiIHZpZXdCb3g9IjAgMCAxMTQwIDUwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvMTE0MHg1MDAvYXV0by8jNjY2OiM0NDQvdGV4dDpTZWNvbmQgc2xpZGUKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTBiM2Q0ODRkMCB0ZXh0IHsgZmlsbDojNDQ0O2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjU3cHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1MGIzZDQ4NGQwIj48cmVjdCB3aWR0aD0iMTE0MCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiM2NjYiLz48Zz48dGV4dCB4PSIzMzUuNjAxNTYyNSIgeT0iMjc1LjUiPlNlY29uZCBzbGlkZTwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true">
-          </div>
-          <div class="item">
-            <img data-src="holder.js/1140x500/auto/#555:#333/text:Third slide" alt="Third slide [1140x500]" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTE0MCIgaGVpZ2h0PSI1MDAiIHZpZXdCb3g9IjAgMCAxMTQwIDUwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvMTE0MHg1MDAvYXV0by8jNTU1OiMzMzMvdGV4dDpUaGlyZCBzbGlkZQpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1MGIzZDQ3NzQyIHRleHQgeyBmaWxsOiMzMzM7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6NTdwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTUwYjNkNDc3NDIiPjxyZWN0IHdpZHRoPSIxMTQwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzU1NSIvPjxnPjx0ZXh0IHg9IjM3Ny44NjcxODc1IiB5PSIyNzUuNSI+VGhpcmQgc2xpZGU8L3RleHQ+PC9nPjwvZz48L3N2Zz4=" data-holder-rendered="true">
-          </div>
+            <!-- /.col-sm-4 -->
         </div>
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
 
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+        </form>
+
+        <div class="page-header">
+            <h1>Panels</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-sm-4 -->
+            <div class="col-sm-4">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-sm-4 -->
+            <div class="col-sm-4">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-sm-4 -->
+        </div>
+
+
+        <div class="page-header">
+            <h1>Wells</h1>
+        </div>
+        <div class="well">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+        </div>
+
+
+        <div class="page-header">
+            <h1>Carousel</h1>
+        </div>
+        <div class="container">
+
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img class="img-responsive" src="http://placehold.it/800x400" alt="...">
+                        <div class="carousel-caption">
+                            <h3>Heading</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="img-responsive" src="http://placehold.it/800x400" alt="...">
+                        <div class="carousel-caption">
+                            <h3>Heading</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="img-responsive" src="http://placehold.it/800x400" alt="...">
+                        <div class="carousel-caption">
+                            <h3>Heading</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+            <br>
+            <br>
+        </div>
 
     </div>
+    <!-- /container -->
 
-    <!-- jQuery first, then Bootstrap JS. -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
-  </body>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    
+    <--! JQUERY --></--!>
+    <script type="text/javascript">
+     jQuery(function ($) {
+        $('.panel-heading span.clickable').on("click", function (e) {
+            if ($(this).hasClass('panel-collapsed')) {
+                // expand the panel
+                $(this).parents('.panel').find('.panel-body').slideDown();
+                $(this).removeClass('panel-collapsed');
+                $(this).find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+            }
+            else {
+                // collapse the panel
+                $(this).parents('.panel').find('.panel-body').slideUp();
+                $(this).addClass('panel-collapsed');
+                $(this).find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+            }
+        });
+    });
+    </script>
+
+</body>
+
 </html>

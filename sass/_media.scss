@@ -1,0 +1,33 @@
+.media {
+  // Proper spacing between instances of .media
+  margin-top: 15px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.media,
+.media-body {
+    
+  zoom: 1;
+  overflow: hidden;
+    background-color: $nov-gray; 
+color:#fff;
+}
+
+.media-body {
+  width: 80%;
+    text-align: left;
+}
+.media-middle {
+  vertical-align: middle;
+}
+
+.media-left,
+.media-right,
+.media-body {
+  display: table-cell;
+  vertical-align: middle;
+        text-align: left;
+}

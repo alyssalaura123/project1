@@ -1,0 +1,96 @@
+/* h2 {
+    font-weight: 300;
+    color: #ea2025;
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 300;
+    margin-bottom: 1px;
+    text-align: left;
+}
+
+h1 {
+    letter-spacing: 0.05em;
+    border-bottom: none;
+    color: #e01d2e;
+    text-transform: inherit;
+}
+
+h2 {
+    ;
+    text-transform: inherit;
+    padding-bottom: 5px;
+}
+
+h2 a {
+    color: #000;
+}
+
+h2 a:hover {
+    text-decoration: none;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+h4 {
+    color: #252525;
+    border-bottom: 1px dotted #414141;
+}
+
+h6.productIndex {
+    color: #e01d2e;
+    border: none;
+    text-transform: none;
+}
+
+h7 {
+    color: #e01d2e;
+}
+
+// Blockquotes
+.well blockquote {
+
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+blockquote p {
+    display: inline;
+}
+
+
+
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 17.5px;
+    border-left: 5px solid $nov-red;
+    p,
+    ul,
+    ol {
+        &:last-child {
+            margin-bottom: 0;
+            font-family: ('Source Sans Pro', sans-serif)
+        }
+    }
+}
+#listgroups {
+ padding-bottom: 5px;   
+}

@@ -1,0 +1,166 @@
+
+$properties: (
+    text-align: left,
+    font-weight: 300,
+    font-family: ('Source Sans Pro', sans-serif)
+);
+$body-bg:               #fff;
+$gray-dark:                 #373a3c !default;
+$gray:                      #55595c !default;
+$gray-light:                #818a91 !default;
+$gray-lighter:              #eceeef !default;
+$gray-lightest:             #f7f7f9 !default;
+$nov-red: #DA291C;
+$nov-gray: #75787B;
+$nov-green: #84BD00;
+$nov-teal: #00A499;
+$nov-blue: #009CDE;
+$nov-brown: #8C8279;
+$nov-dark-red: #A6093D;
+
+$brand-primary:             $nov-red;
+$brand-success:             $nov-green;
+$brand-info:                $nov-blue;
+$brand-warning:             $nov-teal;
+$brand-danger:              $nov-dark-red;
+
+$font-size-base:          14px;
+$font-size-large:         ceil(($font-size-base * 1.25)); // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)); // ~12px
+
+//** Global color for active items (e.g., navs or dropdowns).
+$component-active-color:    #fff;
+//** Global background color for active items (e.g., navs or dropdowns).
+$component-active-bg:       $brand-primary;
+//** Global textual link color.
+$link-color:            #fff;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($nov-gray, 15%);
+//** Link hover decoration.
+$link-hover-decoration: underline;
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:        1.428571429; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
+
+//Buttons
+
+$btn-primary-color:              #fff !default;
+$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-border:             $btn-primary-bg !default;
+
+$btn-default-color:            $gray-dark !default;
+$btn-default-bg:               #fff !default;
+$btn-default-border:           #ccc !default;
+
+$btn-info-color:                 #fff !default;
+$btn-info-bg:                    $brand-info !default;
+$btn-info-border:                $btn-info-bg !default;
+
+$btn-success-color:              #fff !default;
+$btn-success-bg:                 $brand-success !default;
+$btn-success-border:             $btn-success-bg !default;
+
+$btn-warning-color:              #fff !default;
+$btn-warning-bg:                 $brand-warning !default;
+$btn-warning-border:             $btn-warning-bg !default;
+
+$btn-danger-color:               #fff !default;
+$btn-danger-bg:                  $brand-danger !default;
+$btn-danger-border:              $btn-danger-bg !default;
+
+$btn-link-disabled-color:        $gray-light !default;
+$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-border:             $btn-primary-bg !default;
+
+$font-family-sans-serif:  "Source Sans Pro", sans-serif;
+$font-family-serif:      'Source Sans Pro', sans-serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-family-base:        $font-family-sans-serif;
+
+
+
+//== Wells
+//
+//##
+
+$well-bg:                     #fff;
+$well-border:                lighten($nov-gray, 10%);
+ 
+  
+//== Labels
+//
+//##
+
+//** Default label background color
+$label-default-bg:            $gray-light;
+//** Primary label background color
+$label-primary-bg:            $brand-primary;
+//** Success label background color
+$label-success-bg:            $brand-success;
+//** Info label background color
+$label-info-bg:               $brand-info;
+//** Warning label background color
+$label-warning-bg:            $brand-warning;
+//** Danger label background color
+$label-danger-bg:             $brand-danger;
+
+//** Default label text color
+$label-color:                 #fff;
+//** Default text color of a linked label
+$label-link-hover-color:      #fff;
+
+
+//== Blockquotes
+//
+//** Blockquote small color
+$blockquote-small-color:     $nov-red;
+
+
+//** Blockquote border color
+$blockquote-border-color:     $nov-red;
+
+
+
+
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px;
+$screen-sm-min:              $screen-sm;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  992px;
+$screen-md-min:              $screen-md;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1200px;
+$screen-lg-min:              $screen-lg;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);
+
