@@ -1,3 +1,3 @@
 # project1
 
-Bootstrap 
+Super old project while playing around with Bootstrap 
